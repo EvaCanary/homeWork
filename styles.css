@@ -15,13 +15,9 @@ body {
    height: 21.42px;
    
 }
-.navbar {
-    width: 100%;
-    height: 70px;
-}
 .container_navbar {
-    padding: 125px;
-    height: inherit;
+    margin-top: 33px;
+    margin-bottom: 74px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,60 +46,43 @@ opacity: 50%;
 text-decoration: underline;
 }
 /*+ 1 блок*/
-.container_absolute {
-    width: 1150px;
-    margin: 0 auto;
-    padding: 125px;
+.hero {
+    margin-bottom: 112px;
 }
-.wrapper__text {
-    width: 956px;
-    height: 120px;
+.hero__title {
     margin-top: 73.76px;
+    padding-bottom: 88px;
+    width: 956px;
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
-    padding-bottom: 88px;
     letter-spacing: -1.8px;
     color: #121212;
 }
-.container_wrapper {
+.hero__wrapper {
     position: relative;
     width: 1150px;
     height: 500px;
-    margin: 0 auto;
-    
 }
-.absolute__motto { 
-    
+.hero__text { 
+    position: absolute;
+    z-index: 1;
+    left: 37px;
+    width: 430px;
+    bottom: 40px;
     font-size: 20px;
     line-height: 27.32px;
     letter-spacing: -0.03em;
-    position: absolute;
-    bottom: 78px;
-    z-index: 1;
-    left: 37px;
     color: rgb(255, 255, 255);
 }
-.wrapper__hero__img {
-    background-size: contain;
+.hero__img {
+    background-size: cover;
     width: 1150px;
     height: 500px;
-    flex-shrink: 0;
 }
 /*+ 2 мини блок-карточка*/
 
-.aboutUs__title {
-   padding-top: 112px;
-   font-size: 18px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
-   letter-spacing: -0.54px;
-   text-transform: uppercase;
-   color: #121212;
-    
-}
-.container_aboutUs {
+.container__about {
     margin-bottom: 247px;
     padding-bottom: 30px;
     font-weight: 400px;
@@ -116,10 +95,19 @@ text-decoration: underline;
     letter-spacing: -1.35px;
     color: #121212;
 }
-.aboutUs__title {
+.about__title {
     margin-bottom: 30px;
 }
-.aboutUs__serviceButton {
+.about__text {
+    margin-bottom: 30px;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.35px;
+    color: #121212;
+}
+.about__btn {
     margin-top: 30px;
     width: 250px;
     font-weight: 400px;
@@ -134,34 +122,47 @@ text-decoration: underline;
     color: #FFFFFF;
     background-color: #AD1818;
 }
+.about {
+    margin-bottom: 150px;
+}
 /*+Блок 3 - Список проектов*/
+.project__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+    color: #121212;
+}
 .container_project {
     margin-bottom: 30px;
     width: 1150px;
     margin: 0 auto;
 }
-.LCD-PRAVOBEREZHNY_title, 
-.NORWEGIAN-PARK_title, 
-.LCD-SOSNOVSKIE-LAKES_title {
+.pravoberezhny__text, 
+.norvegian-park__text, 
+.sosnovskie-lakes__text {
+    margin-bottom: 15px;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.9px;
+    color: #121212;
 }
-.project__image__LCD-PRAVOBEREZHNY, 
-.project__image__NORWEGIAN-PARK, 
-.project__image__LCD-SOSNOVSKIE-LAKES {
-    background-size: contain;
-    padding-top: 30px;
+.pravoberezhny__img, 
+.norvegian-park__img, 
+.sosnovskie-lakes__img {
+    background-size: cover;
     width: 1150px;
     height: 450px;
     flex-shrink: 0; 
 }
-.LCD-PRAVOBEREZHNY_showMore, 
-.NORWEGIAN-PARK_showMore, 
-.LCD-SOSNOVSKIE-LAKES_showMore {
-    padding-bottom: 90px;
+.pravoberezhny__showMore, 
+.norvegian-park__showMore, 
+.sosnovskie-lakes__showMore {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -170,42 +171,12 @@ text-decoration: underline;
     color: #AD1818;
     text-decoration: none;
 }
-/*+Блок 4 - услуги*/
-.container_servivce {
-    margin-bottom: 60px;
-    margin: 0 auto;
+.pravoberezhny,
+.norvegian-park,
+.sosnovskie-lakes {
+    margin-bottom: 90px;
 }
-.service_title {
-    margin-top: 15px;
-    margin-bottom: 34px;
-    margin: 0 auto;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.54px;
-    text-transform: uppercase;
- }
- .service__image__Planning-solution, 
- .service__image__Design-project, 
- .service__image__Autors-supervision, 
- .service__image__Equipment {
-    margin-bottom: 15px;
- }
- .Planning-solution__text,
- .Design-project__text,
- .Autors-supervision_text, 
- .Equipment__text {
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.9px;
- }
- 
- 
-.project_serviceButton {
-    margin-top: 90px;
+.project__btn {
     margin-bottom: 150px;
     width: 1150px;
     height: 153px;
@@ -217,11 +188,76 @@ text-decoration: underline;
     display: block;
     text-align: center;
     text-decoration: none;
+    border-radius: 5px;
     border: 1px solid #AD1818;
     color: #AD1818;
     background-color: #FFFFFF;
 }
-.project_serviceButton:hover {
+.project__btn:hover {
     color: #FFFFFF;
     background-color: #AD1818;
 }
+/*+Блок 4 - услуги*/
+.service {
+    padding-top: 151px;
+    background-color: #121212;
+}
+.service__container {
+    width: 100%;
+    margin: 0 auto;
+    height: 1844px;
+    max-width: cover;
+    background: cover;
+}
+.service__title {
+    margin-bottom: 34px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+    color: #FFF;
+ }
+ .item {
+    margin-bottom: 60px;
+ }
+ .item:nth-last-child(1){
+    margin-bottom: 150px;
+ }
+ .plan-solution__img, 
+ .sdesign-project__img, 
+ .autor-supervision__img, 
+ .equipment__img {
+    width: 1150px;
+    height: 270px;
+ }
+ .plan-solution__text,
+ .design-project__text,
+ .autor-supervision__text, 
+ .equipment__text {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.9px;
+    color: #FFF;
+ }
+ .example__wrapper {
+    position: relative;
+    background-size: cover;
+    width: 1400px;
+    height: 717px;
+ }
+ .example__text { 
+    position: absolute;
+    z-index: 1;
+    left: 37px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.9px;
+ }
+ 
+ 
